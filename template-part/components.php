@@ -13,7 +13,7 @@ if( $templateSCSS ) :
 		fwrite($template_scss_comp_file,$content);
 		$current = file_get_contents($template_comp_main_file_path);
 		// Append a new person to the file
-		$current .= "@import \"".$template_name."\";\n";
+		$current .= "@use \"".$template_name."\";\n";
 		// Write the contents back to the file
 		file_put_contents($template_comp_main_file_path, $current);
 		fclose($template_scss_comp_file);
@@ -38,7 +38,7 @@ if( have_rows('page_component')) :
 					$scss_comp_file = fopen( $scss_comp_file_path, "w") or die("Unable to open SCSS file!");
 					$current = file_get_contents($component_main_file_path);
 					// Append a new person to the file
-					$current .= "@import \"".str_replace("_","-",$layout)."\";\n";
+					$current .= "@use \"".str_replace("_","-",$layout)."\";\n";
 					file_put_contents($component_main_file_path, $current);
 					fclose($scss_comp_file);
 				}

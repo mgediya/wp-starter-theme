@@ -1,0 +1,22 @@
+{
+    "name": "easycode/zealtheme",
+    "description": "Custom WordPress theme for Zeal.",
+    "type": "wordpress-theme",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "Mehul",
+        "email": "mehul@zealousweb.com"
+      }
+    ],
+    "require": {
+      "php": ">=7.4",
+      "composer/installers": "^2.0"
+    },
+    "extra": {
+      "installer-paths": {
+        "wp-content/themes/{$name}/": ["type:wordpress-theme"]
+      }
+    }
+  }
+  
