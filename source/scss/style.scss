@@ -1,16 +1,3 @@
-// Variable and Mixin
-@import "abstracts/core";
-
-// Vendor
-@import "vendors/core";
-
-// Base
-@import "base/core";
-
-// Layout
-@import "layout/core";
-
-// Components
-@import "components/core";
-
-// pages
+body{
+   display: none;
+}

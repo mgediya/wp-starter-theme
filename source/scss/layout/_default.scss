@@ -31,9 +31,9 @@
 	overflow: hidden;
 }
 
-.main-container {
+.main-content {
 	width: 100%;
-	align-self: start;
+	flex-grow: 1;
 }
 
 // Section Spacing

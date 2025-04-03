@@ -1,35 +1,40 @@
 {
-  "name": "gulp-with-scss",
+  "name": "wp-starter-theme",
   "version": "1.0.0",
-  "description": " with Gulp 4",
-  "main": "gulpfile.js",
-  "dependencies": {
-    "gulp-sourcemaps": "^3.0.0",
-    "node-sass": "^6.0.1",
-    "postcss": "^8.4.4",
-    "sass": "^1.44.0",
-    "sass-migrator": "^1.5.3",
-    "yarn": "^1.22.17"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.0",
-    "browser-sync": "^2.27.7",
-    "del": "^6.0.0",
-    "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^8.0.0",
-    "gulp-postcss": "^9.0.1",
-    "gulp-purgecss": "^4.1.3",
-    "gulp-replace": "^1.1.3",
-    "gulp-sass": "^5.0.0",
-    "gulp-terser": "^2.1.0",
-    "gulp-webp": "^4.0.1",
-    "log-symbols": "^5.1.0"
-  },
+  "description": "WordPress Starter Theme",
+  "main": "config.js",
   "scripts": {
-    "dev": "sass-migrator division **/*.scss && gulp",
-    "build": "gulp prod",
-    "prod": "gulp prod"
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "prod": "npm run production",
+    "production": "mix --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgediya/wp-starter-theme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mgediya/wp-starter-theme/issues"
+  },
+  "homepage": "https://github.com/mgediya/wp-starter-theme#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^7.1.2",
+    "laravel-mix": "^6.0.49",
+    "laravel-mix-purgecss": "^6.0.0",
+    "postcss-loader": "^8.1.1",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.86.1",
+    "sass-loader": "^16.0.5",
+    "terser-webpack-plugin": "^5.3.14"
+  },
+  "dependencies": {
+    "purgecss-webpack-plugin": "^7.0.2",
+    "swiper": "^11.2.6"
   }
 }
