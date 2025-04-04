@@ -50,19 +50,22 @@ export default {
       publicPath: "public",
       basePath: "public",
     }),
-    new StylelintPlugin({
-      configFile: path.resolve(dirname, "stylelint.config.js"),
-      context: "source/scss",
-      files: "**/*.scss",
-      failOnError: false,
-    }),
-    new ESLintPlugin({
-      context: "source/js",
-      extensions: ["js"],
-      overrideConfigFile: path.resolve(dirname, "eslint.config.js"),
-      failOnError: false,
-      fix: true,
-    }),
+    // lint will run on every build, so we need to check if we are in dev mode
+    ...(!isDev ? [
+        new StylelintPlugin({
+          configFile: path.resolve(dirname, "stylelint.config.js"),
+          context: "source/scss",
+          files: "**/*.scss",
+          failOnError: true,
+        }),
+        new ESLintPlugin({
+          context: "source/js",
+          extensions: ["js"],
+          overrideConfigFile: path.resolve(dirname, "eslint.config.js"),
+          failOnError: true,
+          fix: true,
+        })
+    ]:[]),
   ],
   optimization: {
     minimize: !isDev,
@@ -76,9 +79,6 @@ export default {
       }),
       new CssMinimizerPlugin(),
     ],
-    // splitChunks: {
-    //   chunks: "all", // Better code splitting
-    // },
   },
   devtool: isDev ? "source-map" : false,
   watch: isDev,

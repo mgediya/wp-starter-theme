@@ -1,23 +1,34 @@
 // eslint.config.js
-const isDev = process.argv.includes('--watch');
 
 export default [
   {
-    files: ['**/*.js'],
+    files: ["**/*.js"],
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
+      ecmaVersion: "latest",
+      sourceType: "module",
       globals: {
-        window: 'readonly',
-        document: 'readonly',
+        window: "readonly",
+        document: "readonly",
       },
     },
+
     rules: {
-      'no-console': isDev ? 'warn' : 'error',
-      'no-debugger': isDev ? 'warn' : 'error',
-      'semi': ['error', 'always'],
-      'quotes': ['error', 'single'],
-      'indent': ['error', 2],
+      "no-console": "error",
+      "no-debugger": "error",
+      semi: ["error", "always"],
+      quotes: ["error", "single"],
+      indent: ["error", 2],
+      eqeqeq: ["error", "always"], // Enforce strict equality ===
+      curly: ["error", "all"], // Enforce curly braces for all control statements
+      "no-unused-vars": ["warn", { args: "none", ignoreRestSiblings: true }], // Warn on unused vars
+      "no-var": "error", // Enforce let/const over var
+      "prefer-const": ["error", { destructuring: "all" }], // Use const where possible
+      "arrow-spacing": ["error", { before: true, after: true }], // Clean arrow function spacing
+      "comma-dangle": ["error", "always-multiline"], // Trailing comma in multiline objects/arrays
+      "object-curly-spacing": ["error", "always"], // Spacing inside curly braces
+      "array-bracket-spacing": ["error", "never"], // No spacing inside array brackets
+      "space-before-function-paren": ["error", "never"], // No space before function parentheses
+      "keyword-spacing": ["error", { before: true, after: true }], // Consistent keyword spacing
     },
   },
 ];

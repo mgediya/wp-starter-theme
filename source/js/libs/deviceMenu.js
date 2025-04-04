@@ -12,12 +12,12 @@ const DeviceMenu = () => {
   }
     
   /* Mobile overlay click */
-  $overlay.click(function () {
+  $overlay.click(function() {
     menuClose();
   });
     
   /* Responsive Jquery Navigation */
-  $hamBurger.click(function (event) {
+  $hamBurger.click(function(event) {
     if ($(this).hasClass('is-clicked')) {
       menuClose();
     } else {
@@ -31,11 +31,11 @@ const DeviceMenu = () => {
   $('.mbnav li:has(ul)').addClass('has-sub');
   $('.mbnav li > ul').addClass('sub-menu');
   $('.mbnav .has-sub>a').after('<em class="mbnav__caret">');
-  $('.mbnav ul > li:has(ul.sub-menu)').each(function () {
+  $('.mbnav ul > li:has(ul.sub-menu)').each(function() {
     $(this).find('> ul').prepend('<li class="back-click">Main Menu</li>');
   });
     
-  if (clickable == 'true') {
+  if (clickable === 'true') {
     $('.mbnav .has-sub>.mbnav__caret').addClass('trigger-caret');
   } else {
     $('.mbnav .has-sub>a').addClass('trigger-caret').attr('href', 'javascript:;');
@@ -46,18 +46,18 @@ const DeviceMenu = () => {
   $('.mbnav__inner ul li.has-sub ul').wrap('<div class=\'menu-wrap\'><div class=\'menu-inner\'></div></div>');
     
   /* menu open and close on single click */
-  $('.mbnav .has-sub>.trigger-caret').click(function () {
+  $('.mbnav .has-sub>.trigger-caret').click(function() {
     const  element = $(this).parent('li');
     element.addClass('is-open');
     $('body').addClass('scroll-fixed');
   });
     
-  $('.mbnav__inner .mbnav__caret ').on('click', function () {
+  $('.mbnav__inner .mbnav__caret ').on('click', function() {
     const  menuLeftMove = $('.mbnav__inner > .menu-wrap');
     const  backMove = menuLeftMove.css('--leftSlide');
     $('.mbnav__inner > .menu-wrap').css('--leftSlide', (parseInt(backMove) + 100) + '%');
   });
-  $('.mbnav__inner .back-click').on('click', function () {
+  $('.mbnav__inner .back-click').on('click', function() {
     $(this).parent('li').parent('.sub-menu').parent('.menu-inner').parent('.menu-wrap').parent('li').removeClass('is-open');
     const  menuLeftMove = $('.mbnav__inner > .menu-wrap');
     const  backMove = menuLeftMove.css('--leftSlide');
