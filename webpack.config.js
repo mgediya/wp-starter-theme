@@ -4,6 +4,8 @@ import TerserPlugin from "terser-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
 import { WebpackManifestPlugin } from "webpack-manifest-plugin";
+import StylelintPlugin from "stylelint-webpack-plugin";
+import ESLintPlugin from "eslint-webpack-plugin";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -48,6 +50,19 @@ export default {
       publicPath: "public",
       basePath: "public",
     }),
+    new StylelintPlugin({
+      configFile: path.resolve(dirname, "stylelint.config.js"),
+      context: "source/scss",
+      files: "**/*.scss",
+      failOnError: false,
+    }),
+    new ESLintPlugin({
+      context: "source/js",
+      extensions: ["js"],
+      overrideConfigFile: path.resolve(dirname, "eslint.config.js"),
+      failOnError: false,
+      fix: true,
+    }),
   ],
   optimization: {
     minimize: !isDev,
@@ -55,7 +70,7 @@ export default {
       new TerserPlugin({
         terserOptions: {
           compress: {
-            drop_console: !isDev, // Remove console.log in production
+            drop_console: !isDev,
           },
         },
       }),
@@ -75,7 +90,7 @@ export default {
     chunkModules: false,
   },
   performance: {
-    hints: isDev ? false : "warning", // Performance hints in production
+    hints: isDev ? false : "warning",
     maxEntrypointSize: 512000, // 500kb
     maxAssetSize: 512000, // 500kb
   },

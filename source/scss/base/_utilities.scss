@@ -190,7 +190,7 @@ right;
     }
 }
 
-@if $spacing==true {
+@if $spacing == true {
     @each $space in $spaceamounts {
         @each $side in $sidesY {
 

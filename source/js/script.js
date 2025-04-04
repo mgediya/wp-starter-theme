@@ -1,5 +1,5 @@
-import swiper from "./libs/swiperInit.js";
-import deviceMenu from "./libs/deviceMenu.js";
+import swiper from './libs/swiperInit.js';
+import deviceMenu from './libs/deviceMenu.js';
 
 swiper();
-deviceMenu()
+deviceMenu();

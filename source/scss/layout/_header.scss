@@ -1,4 +1,4 @@
-/*--- header ---*/
+/* Header */
 .main-header {
 	position: relative;
 	width: 100%;
@@ -15,6 +15,7 @@
 	/* nav */
 	.navigation {
 		word-break: keep-all;
+		
 		@include respond-below(md){
 			display: none;
 		}
