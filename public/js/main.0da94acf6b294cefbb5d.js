@@ -4638,34 +4638,6 @@ var SwiperSlide = function SwiperSlide() {
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SwiperSlide);
 
-/***/ }),
-
-/***/ "./source/js/script.js":
-/*!*****************************!*\
-  !*** ./source/js/script.js ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _libs_swiperInit_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./libs/swiperInit.js */ "./source/js/libs/swiperInit.js");
-/* harmony import */ var _libs_deviceMenu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./libs/deviceMenu.js */ "./source/js/libs/deviceMenu.js");
-
-
-(0,_libs_swiperInit_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
-(0,_libs_deviceMenu_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
-
-/***/ }),
-
-/***/ "./source/scss/style.scss":
-/*!********************************!*\
-  !*** ./source/scss/style.scss ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
 /***/ })
 
 /******/ 	});
@@ -4725,18 +4697,31 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
 (() => {
-/*!*************************!*\
-  !*** ./source/index.js ***!
-  \*************************/
+var __webpack_exports__ = {};
+/*!*****************************!*\
+  !*** ./source/js/script.js ***!
+  \*****************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/style.scss */ "./source/scss/style.scss");
-/* harmony import */ var _js_script_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/script.js */ "./source/js/script.js");
+/* harmony import */ var _libs_swiperInit_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./libs/swiperInit.js */ "./source/js/libs/swiperInit.js");
+/* harmony import */ var _libs_deviceMenu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./libs/deviceMenu.js */ "./source/js/libs/deviceMenu.js");
 
+
+(0,_libs_swiperInit_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
+(0,_libs_deviceMenu_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
+})();
+
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
+(() => {
+/*!********************************!*\
+  !*** ./source/scss/style.scss ***!
+  \********************************/
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.js.map
+//# sourceMappingURL=main.0da94acf6b294cefbb5d.js.map
