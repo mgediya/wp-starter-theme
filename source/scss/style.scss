@@ -1,4 +1,4 @@
-// // Variable and Mixin
+// Variable and Mixin
 // @use "abstracts/core";
 
 // // Base
@@ -10,6 +10,8 @@
 // // Components
 // @use "components/core";
 
+
 body{
     display: none;
+    background-color: #000;
 }
