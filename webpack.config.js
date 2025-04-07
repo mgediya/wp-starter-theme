@@ -41,6 +41,12 @@ export default {
       },
     ],
   },
+  resolve: {
+    extensions: ['.scss'],
+    alias: {
+      '@scss': path.resolve(dirname, 'source/scss'),
+    },
+  },
   plugins: [
     new MiniCssExtractPlugin({
       filename: "css/[name].[contenthash].css",

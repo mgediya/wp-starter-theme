@@ -1,16 +1,11 @@
-// // Variable and Mixin
-// @use "abstracts/core";
+// Variable and Mixin
+@use "abstracts/core" as abstracts;
 
-// // Base
-// @use "base/core";
+// Base
+@use "base/core" as base;
 
-// // Layout
-// @use "layout/core";
+// Layout
+@use "layout/core" as layout;
 
-// // Components
-// @use "components/core";
-
-body{
-    display: none;
-    background-color: #f0f0f0;
-}
+// Components
+@use "components/core" as components;
