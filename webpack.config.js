@@ -55,9 +55,9 @@ export default {
         new StylelintPlugin({
           configFile: path.resolve(dirname, "config/stylelint.config.js"),
           context: "source/scss",
-          files: "**/*.scss",
+          files: "**/style.scss",
           failOnError: true,
-          fix: true
+          fix: false
         }),
         new ESLintPlugin({
           context: "source/js",
