@@ -17,7 +17,7 @@ export default [
       "no-debugger": "error",
       semi: ["error", "always"],
       quotes: ["error", "single"],
-      indent: ["error", 2],
+      indent: ["error", 4],
       eqeqeq: ["error", "always"], // Enforce strict equality ===
       curly: ["error", "all"], // Enforce curly braces for all control statements
       "no-unused-vars": ["warn", { args: "none", ignoreRestSiblings: true }], // Warn on unused vars

@@ -57,13 +57,14 @@ export default {
           context: "source/scss",
           files: "**/*.scss",
           failOnError: true,
+          fix: true
         }),
         new ESLintPlugin({
           context: "source/js",
           extensions: ["js"],
           overrideConfigFile: path.resolve(dirname, "config/eslint.config.js"),
           failOnError: true,
-          fix: true,
+          fix: false,
         })
     ]:[]),
   ],

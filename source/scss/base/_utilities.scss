@@ -5,11 +5,13 @@
 
 %container {
     --gutter: #{$gutters};
+
     // max-width: calc(var(--container-width, none) + var(--gutter) * 2);
     // width: min(100%, calc(var(--container-width, none) + var(--gutter) * 2));
     width: min(100% - var(--gutter) * 2, var(--container-width, 100%));
     margin-left: auto;
     margin-right: auto;
+
     // padding-left: var(--gutter);
     // padding-right: var(--gutter);
 
@@ -20,6 +22,7 @@
 
 .container {
     --container-width: #{$container-width};
+
     @extend %container;
 
     &-fluid {
@@ -178,7 +181,6 @@ $color in $bgColor-map {
 
 /* column structure */
 $grid-columns: 12;
-
 $sidesY: top,
 bottom;
 $sidesX: left,
@@ -193,7 +195,6 @@ right;
 @if $spacing == true {
     @each $space in $spaceamounts {
         @each $side in $sidesY {
-
             // margin
             .m#{str-slice($side, 0, 1)}-#{$space},
             .m-#{$space},
@@ -210,7 +211,6 @@ right;
         }
 
         @each $side in $sidesX {
-
             // margin
             .m#{str-slice($side, 0, 1)}-#{$space},
             .m-#{$space},
@@ -240,7 +240,6 @@ $bp in $breakpoints {
         @if $spacing==true {
             @each $space in $spaceamounts {
                 @each $side in $sidesY {
-
                     // margin
                     .m#{str-slice($side, 0, 1)}-#{$bp-key}-#{$space},
                     .m-#{$bp-key}-#{$space},
@@ -257,7 +256,6 @@ $bp in $breakpoints {
                 }
 
                 @each $side in $sidesX {
-
                     // margin
                     .m#{str-slice($side, 0, 1)}-#{$bp-key}-#{$space},
                     .m-#{$bp-key}-#{$space},
