@@ -10,7 +10,8 @@
     "build": "webpack --mode production",
     "prettier:fix": "prettier --write .",
     "prettier:check": "prettier --check .",
-    "prepare": "husky"
+    "prepare": "husky",
+     "test": "echo \"No tests yet\""
   },
   "lint-staged": {
     "*.js": "eslint --fix",
