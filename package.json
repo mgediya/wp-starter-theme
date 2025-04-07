@@ -11,6 +11,7 @@
     "prettier:fix": "prettier --write .",
     "prettier:check": "prettier --check .",
     "prepare": "husky",
+    "lint": "tsc && next lint",
      "test": "echo \"No tests yet\""
   },
   "lint-staged": {
