@@ -10,17 +10,12 @@
     "build": "webpack --mode production",
     "prettier:fix": "prettier --write .",
     "prettier:check": "prettier --check .",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.scss": [
-      "eslint --fix",
-      "git add"
-    ]
+    "*.js": "eslint --fix",
+    "*.scss": "stylelint --fix",
+    "*.{js,scss,css,json,md}": "prettier --write"
   },
   "repository": {
     "type": "git",
