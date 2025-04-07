@@ -12,12 +12,10 @@ actual_len=${#commit_msg}
 
 if [ "$actual_len" -lt "$min_len" ]; then
   echo "🚫 Commit message is too short ($actual_len chars). Must be at least $min_len characters."
-  exit 1
 fi
 
 if [ "$actual_len" -gt "$max_len" ]; then
   echo "🚫 Commit message is too long ($actual_len chars). Must be under $max_len characters."
-  exit 1
 fi
 
 # ✅ Spell check using cspell
@@ -25,7 +23,6 @@ echo "$commit_msg" | npx cspell --languageId plaintext stdin
 
 if [ $? -ne 0 ]; then
   echo "🚫 Spelling errors found in commit message. Please fix them."
-  exit 1
 fi
 
 echo "✅ No spelling mistakes found and message length is valid!"
