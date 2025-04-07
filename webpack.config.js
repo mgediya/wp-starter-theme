@@ -53,7 +53,7 @@ export default {
     // lint will run on every build, so we need to check if we are in dev mode
     ...(!isDev ? [
         new StylelintPlugin({
-          configFile: path.resolve(dirname, "stylelint.config.js"),
+          configFile: path.resolve(dirname, "config/stylelint.config.js"),
           context: "source/scss",
           files: "**/*.scss",
           failOnError: true,
@@ -61,7 +61,7 @@ export default {
         new ESLintPlugin({
           context: "source/js",
           extensions: ["js"],
-          overrideConfigFile: path.resolve(dirname, "eslint.config.js"),
+          overrideConfigFile: path.resolve(dirname, "config/eslint.config.js"),
           failOnError: true,
           fix: true,
         })
