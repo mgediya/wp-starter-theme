@@ -3,3 +3,6 @@ import deviceMenu from './libs/deviceMenu.js';
 
 swiper();
 deviceMenu();
+
+
+alert(0)    
