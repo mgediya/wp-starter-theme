@@ -1,0 +1,14 @@
+#!/bin/sh
+echo "🔍 Checking spelling in commit message..."
+
+commit_msg_file=$1
+commit_msg=$(cat "$commit_msg_file")
+
+echo "$commit_msg" | npx cspell --languageId plaintext stdin
+
+if [ $? -ne 0 ]; then
+  echo "🚫 Spelling errors found in commit message. Please fix them."
+  exit 1
+fi
+
+echo "✅ No spelling mistakes found!"
