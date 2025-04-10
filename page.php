@@ -26,3 +26,4 @@ echo '<div class="main-content">';
 	endif;
 echo '</div>';
 get_footer();
+// this is testing
